@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookpal</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <section class="root">
+        <span class="menu-icon">&#9776;</span>
+        <div class="header">
+            <div class="logo">
+                <img src="./images/Cookpal 1.svg" alt="logo">
+            </div>
+
+            <div class="header-options">
+                <div id="home">Home</div>
+                <div>Explore</div>
+                <div>Help</div>
+                <div id="profile">
+                    <img src="./images/Ellipse 2.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-section">
+            <p id="trending">Trending now</p>
+            <p class="recepie">Mike's famous salad</p>
+            <p class="recepie">with cheese</p>
+            <p id="chef">By John Mike</p>
+        </div>
+
+        <div class="search">
+            <h4>Search For Recipes</h4>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search for recipes..." id="searchInput">
+            </div>
+        </div>
+
+        <div class="filter">
+            <div onclick="allRecipes()" class="all-recipes sort">
+                <div class="all-content recipes">
+                    <p>All Recipes</p>
+                    <i class="fa-solid fa-chevron-right chevron"></i>
+                </div>
+            </div>
+            <div onclick="onlyVegRecipes()" class="veg-recipes sort">
+                <div class="veg-content recipes">
+                    <p>Veg Recipes Only</p>
+                    <i class="fa-solid fa-chevron-right chevron"></i>
+                </div>
+            </div>
+            <div onclick="onlyNonVegRecipes()" class="non-veg-recipes sort">
+                <div class="non-veg-content recipes">
+                    <p>Non Veg Recipes</p>
+                    <i class="fa-solid fa-chevron-right chevron"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="Rating">
+                <h3>Filters</h3>
+                <h4>Rating</h4>
+
+                <div class="rating-4">
+                    <input type="radio" name="filter" onclick="above4()">
+                    <p>4 and Above</p>
+                </div>
+
+                <div class="rating-4">
+                    <input type="radio" name="filter" onclick="below4()">
+                    <p>Below 4</p>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card veg above4">
+                    <img src="https://images.unsplash.com/photo-1516594798947-e65505dbb29d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8dmVnZ2llc3x8fHx8fDE2OTkwNjY2NTQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Veggie Delight</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.2</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>30 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card nonveg above4">
+                    <img src="https://images.unsplash.com/photo-1599161146640-8d60bd2888e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2hpY2tlbnx8fHx8fDE2OTkwNjg3NzI&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Non-Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Chicken Grill</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.5</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>45 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card veg above4">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cGl6emF8fHx8fHwxNjk5MDY4OTgw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Cheese Pizza</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.1</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>40 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card nonveg above4">
+                    <img src="https://images.unsplash.com/photo-1546964124-0cce460f38ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c3RlYWt8fHx8fHwxNjk5MDY5MTk0&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Non-Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Steak</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.7</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>60 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card nonveg above4">
+                    <img src="https://images.unsplash.com/photo-1625229466790-62bae5ab4ff4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c2FsbW9ufHx8fHx8MTY5OTA2OTI1OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Non-Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Grilled Salmon</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.6</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>50 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card veg above4">
+                    <img src="https://images.unsplash.com/photo-1633613368006-e0df258b2c24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cGFzdGF8fHx8fHwxNjk5MDY5NTY2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Tomato Pasta</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.0</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>35 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card veg below4">
+                    <img src="https://images.unsplash.com/photo-1505714197102-6ae95091ed70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8c2FsYWR8fHx8fHwxNjk5MDY5NzIx&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Vegan Salad</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>3.9</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>20 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card nonveg above4">
+                    <img src="https://images.unsplash.com/photo-1627924261590-0c32b83b13a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZnJpZWRDaGlja2VufHx8fHx8MTY5OTA2OTg2OA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Non-Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Fried Chicken</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.3</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>55 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card veg above4">
+                    <img src="https://images.unsplash.com/photo-1623962470629-ead26532ef44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cmlzb3R0b3x8fHx8fDE2OTkwNjk5ODk&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Mushroom Risotto</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.5</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>45 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card nonveg above4">
+                    <img src="https://images.unsplash.com/photo-1618538701087-fb7e0312de34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8YnVyZ2VyfHx8fHx8MTY5OTA3MDEzNA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Non-Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Burger</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.2</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>30 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card veg above4">
+                    <img src="https://img.freepik.com/premium-photo/paneer-tikka-is-indian-dish-made-from-chunks-cottage-cheese-marinated-spices-grilled-tandoor_466689-76798.jpg">
+                    <div class="category">
+                        <p>Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Paneer Tikka</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.4</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>40 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card nonveg above4">
+                    <img src="https://images.unsplash.com/photo-1601625618965-0b791a9b0d69?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cmlic3x8fHx8fDE2OTkwNzAzNzM&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Non-Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>BBQ Ribs</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.6</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>70 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card veg below4">
+                    <img src="https://images.unsplash.com/photo-1590520032542-550749c7cd9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2Flc2FyU2FsYWR8fHx8fHwxNjk5MDcwNTE1&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Ceaser Salad</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>3.8</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>25 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card nonveg above4">
+                    <img src="https://media.istockphoto.com/id/1200136076/photo/shrimp-street-tacos.jpg?s=612x612&w=0&k=20&c=QSliAiLbFEmF7WPN69yEc-weAInG6A4GquGxaGEgBzE=">
+                    <div class="category">
+                        <p>Non-Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Fish Tacos</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.3</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>35 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card veg above4">
+                    <img src="https://images.unsplash.com/photo-1584880287331-cbf11e057f1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2hvY29sYXRlQ2FrZXx8fHx8fDE2OTkwNzA3Mzg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080">
+                    <div class="category">
+                        <p>Veg</p>
+                    </div>
+
+                    <div class="name-rating">
+                        <div class="name">
+                            <h3>Chocolate Cake</h3>
+                        </div>
+                        <div class="star">
+                            <i class="fa-solid fa-star" style="color: #ff9500;"></i>
+                            <p>4.9</p>
+                        </div>
+                    </div>
+
+                    <div class="time-liked">
+                        <div class="time">
+                            <p>90 min</p>
+                        </div>
+                        <div class="like">
+                            <button class="like-unlike"><i class="fa-regular fa-heart"></i></button>
+                            <i class="fa-regular fa-comment"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="left">
+                <img src="./images/Cookpal 1.svg">
+                <p>Cookpal is a recipe website with a<br>wide variety of delicious recipes,<br>easy-to-use search function. Join<br> our community and let's cook<br> together!</p>
+            </div>
+
+            <div class="company-resources">
+                <div class="more-info">
+                    <p id="company">Company</p>
+                    <p>Home</p>
+                    <p>Explore</p>
+                    <p>Team</p>
+                    <p>About us</p>
+                    <p>Activity</p>
+                </div>
+                <div class="more-info">
+                    <p id="resources">Resources</p>
+                    <p>Blog</p>
+                    <p>Use Cases</p>
+                    <p>Testimonials</p>
+                    <p>Insights</p>
+                </div>
+            </div>
+
+            <div class="subscribe">
+                <div>
+                    <img src="./images/Cookpal 1.svg">
+                </div>
+                <p>Ut risus mattis interdum faucibus facilisi. Facilisi purus<br>accumsan aliquam.</p>
+                <div class="register">
+                    <input type="text" placeholder="Your Email">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="social">
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+
+    </section>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

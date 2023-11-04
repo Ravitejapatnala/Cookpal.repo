@@ -1,0 +1,317 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.root{
+    padding: 20px 40px;
+}
+
+/* HEADER SECTION */
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-options{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: #253d4e;
+}
+
+#home{
+    color: #509e2f;
+}
+
+.menu-icon{
+    display: none;
+}
+
+/* HERO-SECTION */
+
+.hero-section{
+    background-image: url(./images/Rectangle\ 20\ \(1\).svg);
+    background-size: cover;
+    padding: 95px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 70px;
+}
+
+#trending{
+    font-size: 24px;
+    color: #a44725;
+}
+
+.recepie{
+    font-weight: 700;
+    color: white;
+    font-size: 40px;
+}
+
+#chef{
+    font-size: 20px;
+    color: white;
+}
+
+/* SEARCH BAR */
+
+.search{
+    line-height: 50px;
+}
+
+.search>h4{
+    font-family: 'Poppins', sans-serif;
+}
+.search-bar{
+    padding: 0px 10px;
+    border: none;
+    border-radius: 12px;
+    background-color: #f3f3f3;
+    color: rgb(130, 130, 130);
+}
+
+#searchInput{
+    background-color: transparent;
+    border: none;
+    width: 40vw;
+    height: 45px;
+}
+
+/* FILTER */
+
+.filter{
+    display: flex;
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.recipes{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 25px;
+    gap: 10px;
+}
+
+.all-recipes{
+    background-color: #eaaa00;
+    border-radius: 6px;
+}
+
+.veg-recipes{
+    background-color: #c4d600;
+    border-radius: 6px;
+}
+
+.non-veg-recipes{
+    background-color: #dc582a;
+    border-radius: 6px;
+}
+
+.rating-4{
+    display: flex;
+    gap: 10px;
+}
+
+.sort:hover{
+    cursor: pointer;
+}
+
+/* MAIN */
+
+.main{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    margin-top: 30px;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Rating{
+    font-family: 'Poppins', sans-serif;
+}
+
+.Rating> h3{
+    line-height: 50px;
+}
+
+.Rating> h4{
+    line-height: 40px;
+}
+
+.rating-4{
+    line-height: 40px;
+}
+
+.rating-4>input:hover{
+    cursor: pointer;
+}
+
+.items{
+    background-color: black;
+}
+
+.card{
+    width: 270px;
+    border-radius: 16px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 8px -1px #3232470D;
+    box-shadow: 0px 0px 1px 0px #0C1A4B3D;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 16px;
+}
+
+.category>p{
+    text-align: left;
+    color: #a1a1a1;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+}
+
+.name-rating{
+    display: flex;
+    justify-content: space-between;
+    line-height: 50px;
+}
+
+.name>h3{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.star{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.star>p{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #a1a1a1;
+}
+
+.time-liked{
+    display: flex;
+    justify-content: space-between;
+}
+
+.like{
+    display: flex;
+    gap: 20px;
+}
+
+.time>p{
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: #dc582a;
+}
+
+.like-unlike{
+    border: none;
+    background-color: transparent;
+}
+
+.like-unlike:hover{
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    color: #254d4e;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 90px;
+}
+
+.company-resources{
+    display: flex;
+    gap: 25px;
+}
+
+.more-info>p{
+    line-height: 30px;
+}
+
+.more-info>p:hover{
+    cursor: pointer;
+}
+
+.subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#company, #resources{
+    font-weight: 600;
+}
+
+.register>input{
+    padding: 10px;
+}
+
+.register>button{
+    padding: 10px;
+    background-color: #509e2f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.register>button:hover{
+    cursor: pointer;
+}
+
+.social{
+    justify-content: center;
+    gap: 30px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.social>i{
+    cursor: pointer;
+}
+
+/* TOGGLING */
+
+.hide{
+    display: none;
+}
+
+.favourite{
+    color: red;
+}
+
+
+/* MEDIA QUERIES */
+
+/* @media(max-width: 768px){
+    .header{
+        display: none;
+    }
+
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .show{
+        <img src="./images/Cookpal 1.svg" alt="logo">
+    }
+} */
